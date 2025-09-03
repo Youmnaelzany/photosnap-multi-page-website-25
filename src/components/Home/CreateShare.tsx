@@ -15,7 +15,9 @@ const CreateShare = () => {
       widthDesktop={830}
       heightDesktop={650}
       backgroundColor="#000"
+      textColor="#fff"
       hrefLink="/stories"
+      rowReverse={false}
     />
   );
 };

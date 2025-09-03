@@ -15,6 +15,7 @@ const DesignEveryone = () => {
       widthDesktop={830}
       heightDesktop={650}
       hrefLink="/stories"
+      rowReverse={false}
     />
   );
 };

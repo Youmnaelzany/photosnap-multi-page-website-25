@@ -3,8 +3,6 @@ import Link from "next/link";
 
 import { MoveRight } from "lucide-react";
 
-import Wrapper from "../Wrapper/Wrapper";
-
 const HomeCard = ({
   title,
   paragraph,
@@ -20,6 +18,8 @@ const HomeCard = ({
   backgroundColor,
   linkTitle,
   hrefLink,
+  textColor,
+  rowReverse,
 }: {
   title: string;
   paragraph: string;
@@ -35,51 +35,63 @@ const HomeCard = ({
   backgroundColor?: string;
   linkTitle?: string;
   hrefLink?: string;
+  textColor?: string;
+  rowReverse?: boolean;
 }) => {
   return (
-    <section>
-      <Wrapper className="flex flex-col md:flex-row">
-        {/* Text */}
-        <div
-          className=""
-          style={{ backgroundColor: backgroundColor || "transparent" }}
-        >
-          <div className="">
-            <h2 className="">{title}</h2>
-            <p className="">{paragraph}</p>
-          </div>
-          <div className="">
-            <Link href={hrefLink || "/"} className="">
-              {linkTitle || "View the stories"}
-              <MoveRight />
-            </Link>
-          </div>
+    <section
+      className={`flex flex-col-reverse ${rowReverse ? "md:flex-row-reverse" : "md:flex-row"} mx-auto max-w-7xl`}
+    >
+      {/* Text */}
+      <div
+        className="flex w-full flex-col justify-center gap-8 px-6 py-10 sm:px-10 md:w-[495px] lg:w-[610px] lg:px-12"
+        style={{
+          backgroundColor: backgroundColor || "transparent",
+          color: textColor || "Black",
+        }}
+      >
+        <div className="w-[318px] space-y-6 md:w-[387px]">
+          <h2 className="text-[2rem] leading-10 font-bold tracking-[3.33px] uppercase md:text-[2.5rem] md:leading-12 md:tracking-[4.17px]">
+            {title}
+          </h2>
+          <p className="text-[0.9375rem] leading-[1.5625rem] font-normal opacity-60">
+            {paragraph}
+          </p>
         </div>
-        {/* Images */}
         <div className="">
-          <Image
-            src={desktopImage}
-            alt="Desktop Image"
-            width={widthDesktop}
-            height={heightDesktop}
-            className="hidden lg:block"
-          />
-          <Image
-            src={tabletImage}
-            alt="Tablet Image"
-            width={widthTablet}
-            height={heightTablet}
-            className="hidden md:block lg:hidden"
-          />
-          <Image
-            src={mobileImage}
-            alt="Mobile Image"
-            width={widthMobile}
-            height={heightMobile}
-            className="md:hidden"
-          />
+          <Link
+            href={hrefLink || "/"}
+            className="flex items-center gap-4 text-[0.75rem] font-bold tracking-[2px] uppercase"
+          >
+            {linkTitle || "View the stories"}
+            <MoveRight />
+          </Link>
         </div>
-      </Wrapper>
+      </div>
+      {/* Images */}
+      <div className="w-[375px] md:w-[273px] lg:w-[830px]">
+        <Image
+          src={desktopImage}
+          alt="Desktop Image"
+          width={widthDesktop}
+          height={heightDesktop}
+          className="hidden lg:block"
+        />
+        <Image
+          src={tabletImage}
+          alt="Tablet Image"
+          width={widthTablet}
+          height={heightTablet}
+          className="hidden md:block lg:hidden"
+        />
+        <Image
+          src={mobileImage}
+          alt="Mobile Image"
+          width={widthMobile}
+          height={heightMobile}
+          className="md:hidden"
+        />
+      </div>
     </section>
   );
 };

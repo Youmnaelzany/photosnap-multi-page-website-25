@@ -17,7 +17,7 @@ const Header = () => {
           />
         </Link>
         <nav className="hidden md:block">
-          <ul className="">
+          <ul className="flex items-center justify-between">
             <li className="">
               <Link href={"/stories"} className="">
                 Stories
@@ -35,9 +35,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <Button type="button" asChild>
-          Get an invite
-        </Button>
+        <Button type="button">Get an invite</Button>
       </Wrapper>
     </header>
   );

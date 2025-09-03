@@ -15,6 +15,7 @@ const BeautifulStories = () => {
       widthDesktop={830}
       heightDesktop={650}
       linkTitle="Get an invite"
+      rowReverse={true}
     />
   );
 };
