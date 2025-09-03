@@ -120,3 +120,59 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Facebook icon styles */
+.facebook-icon {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.facebook-icon:hover {
+  color: transparent;
+}
+
+.facebook-icon:hover path {
+  fill: url(#facebook-gradient);
+}
+
+/* Social media icons styles */
+.facebook-icon,
+.youtube-icon,
+.twitter-icon,
+.pinterest-icon,
+.instagram-icon {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.facebook-icon:hover,
+.youtube-icon:hover,
+.twitter-icon:hover,
+.pinterest-icon:hover,
+.instagram-icon:hover {
+  color: transparent;
+}
+
+.facebook-icon:hover path,
+.youtube-icon:hover path,
+.twitter-icon:hover path,
+.pinterest-icon:hover path,
+.instagram-icon:hover path {
+  fill: url(#facebook-gradient);
+}
+
+.youtube-icon:hover path {
+  fill: url(#youtube-gradient);
+}
+
+.twitter-icon:hover path {
+  fill: url(#twitter-gradient);
+}
+
+.pinterest-icon:hover path {
+  fill: url(#pinterest-gradient);
+}
+
+.instagram-icon:hover path {
+  fill: url(#instagram-gradient);
+}
