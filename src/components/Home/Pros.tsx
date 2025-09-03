@@ -34,10 +34,13 @@ const prosDivs = [
 
 const Pros = () => {
   return (
-    <section>
-      <Wrapper>
+    <section className="py-32">
+      <Wrapper className="flex flex-col items-center justify-center gap-16 lg:flex-row lg:items-end lg:justify-between lg:gap-6">
         {prosDivs.map((pro) => (
-          <div className="" key={pro.id}>
+          <div
+            className="flex w-[310px] flex-col items-center justify-center gap-[48px] md:w-[457px] lg:w-[350px]"
+            key={pro.id}
+          >
             <div className="">
               <Image
                 src={pro.image}
@@ -46,9 +49,13 @@ const Pros = () => {
                 alt={pro.title}
               />
             </div>
-            <div className="">
-              <h2 className="">{pro.title}</h2>
-              <p className="">{pro.paragraph}</p>
+            <div className="flex flex-col items-center justify-center gap-4 text-center">
+              <h2 className="text-lg leading-6.5 font-bold tracking-normal text-black">
+                {pro.title}
+              </h2>
+              <p className="text-lg leading-6.5 font-normal tracking-normal text-black/80">
+                {pro.paragraph}
+              </p>
             </div>
           </div>
         ))}
