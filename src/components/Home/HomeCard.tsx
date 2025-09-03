@@ -61,7 +61,7 @@ const HomeCard = ({
         <div className="">
           <Link
             href={hrefLink || "/"}
-            className="flex items-center gap-4 text-[0.75rem] font-bold tracking-[2px] uppercase"
+            className="flex cursor-pointer items-center gap-4 text-[0.75rem] font-bold tracking-[2px] uppercase transition duration-300 ease-in-out hover:underline"
           >
             {linkTitle || "View the stories"}
             <MoveRight />
@@ -69,27 +69,27 @@ const HomeCard = ({
         </div>
       </div>
       {/* Images */}
-      <div className="w-[375px] md:w-[273px] lg:w-[830px]">
+      <div className="h-auto w-[375px] md:w-[273px] lg:w-[830px]">
         <Image
           src={desktopImage}
           alt="Desktop Image"
           width={widthDesktop}
           height={heightDesktop}
-          className="hidden lg:block"
+          className="hidden bg-cover bg-top lg:block"
         />
         <Image
           src={tabletImage}
           alt="Tablet Image"
           width={widthTablet}
           height={heightTablet}
-          className="hidden md:block lg:hidden"
+          className="hidden bg-cover bg-top md:block lg:hidden"
         />
         <Image
           src={mobileImage}
           alt="Mobile Image"
           width={widthMobile}
           height={heightMobile}
-          className="md:hidden"
+          className="bg-cover bg-top md:hidden"
         />
       </div>
     </section>
