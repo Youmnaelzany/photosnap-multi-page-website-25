@@ -29,6 +29,14 @@ const MobileMenu = () => {
                 <ul className="flex flex-col items-center justify-center gap-8">
                   <li className="">
                     <Link
+                      href={"/"}
+                      className="text-[15px] font-bold tracking-[2.5px] text-black uppercase"
+                    >
+                      Home
+                    </Link>
+                  </li>
+                  <li className="">
+                    <Link
                       href={"/stories"}
                       className="text-[15px] font-bold tracking-[2.5px] text-black uppercase"
                     >

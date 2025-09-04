@@ -6,7 +6,7 @@ import StoryCard from "@/components/Stories/StoryCard";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="pt-25 md:pt-0">
       <CreateShare />
       <BeautifulStories />
       <DesignEveryone />

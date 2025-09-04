@@ -40,7 +40,7 @@ const HomeCard = ({
 }) => {
   return (
     <section
-      className={`flex flex-col-reverse ${rowReverse ? "md:flex-row-reverse" : "md:flex-row"} mx-auto max-w-7xl`}
+      className={`flex flex-col-reverse ${rowReverse ? "md:flex-row-reverse" : "md:flex-row"} mx-auto w-full max-w-7xl`}
     >
       {/* Text */}
       <div
@@ -69,27 +69,27 @@ const HomeCard = ({
         </div>
       </div>
       {/* Images */}
-      <div className="h-auto w-[375px] md:w-[273px] lg:w-[830px]">
+      <div className="w-full md:w-[273px] lg:w-[830px]">
         <Image
           src={desktopImage}
           alt="Desktop Image"
           width={widthDesktop}
           height={heightDesktop}
-          className="hidden bg-cover bg-top lg:block"
+          className="hidden bg-cover lg:block"
         />
         <Image
           src={tabletImage}
           alt="Tablet Image"
           width={widthTablet}
           height={heightTablet}
-          className="hidden bg-cover bg-top md:block lg:hidden"
+          className="hidden bg-cover md:block lg:hidden"
         />
         <Image
           src={mobileImage}
           alt="Mobile Image"
           width={widthMobile}
           height={heightMobile}
-          className="bg-cover bg-top md:hidden"
+          className="h-auto w-full object-cover md:hidden"
         />
       </div>
     </section>
