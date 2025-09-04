@@ -10,12 +10,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 z-50 w-full bg-white">
       <Wrapper className="flex items-center justify-between py-8">
         <Link href={"/"}>
-          <Image
-            src={"/shared/desktop/logo.svg"}
-            alt="Logo"
-            width={170}
-            height={16}
-          />
+          <Image src={"/logo.svg"} alt="Logo" width={170} height={16} />
         </Link>
         <nav className="hidden md:block">
           <ul className="flex items-center justify-between gap-8">

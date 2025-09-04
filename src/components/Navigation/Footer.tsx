@@ -17,12 +17,7 @@ const Footer = () => {
       <Wrapper className="grid grid-cols-1 justify-between gap-8 bg-black py-16 md:grid-cols-2 lg:grid-cols-3">
         <div className="flex flex-col items-center justify-center gap-8 md:items-start md:justify-between">
           <Link href={"/"}>
-            <Image
-              src={"/shared/desktop/logo-white.svg"}
-              alt="Logo"
-              width={170}
-              height={16}
-            />
+            <Image src={"/logo-white.svg"} alt="Logo" width={170} height={16} />
           </Link>
           {/* Social Media */}
           <div className="flex items-center justify-center gap-8 md:items-start md:justify-between">

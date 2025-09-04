@@ -176,3 +176,10 @@
 .instagram-icon:hover path {
   fill: url(#instagram-gradient);
 }
+
+/* Responsive background images for story cards */
+@media (min-width: 768px) {
+  [style*="--desktop-bg"] {
+    background-image: var(--desktop-bg) !important;
+  }
+}
