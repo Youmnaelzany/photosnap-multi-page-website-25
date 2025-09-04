@@ -129,6 +129,7 @@ const stories = [
     id: 16,
     date: "February 25th 2020",
     name: "Land of Dreams",
+
     photographer: "by William Malcolm",
     imageMobile: "/stories/mobile/land-of-dreams.jpg",
     imageDesktop: "/stories/desktop/land-of-dreams.jpg",
