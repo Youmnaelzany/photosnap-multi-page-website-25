@@ -18,7 +18,7 @@ const HazyFullMoon = () => {
           Last month&apos;s featured story
         </h1>
 
-        <h2 className="text-[32px] leading-10 tracking-[3.33px] uppercase">
+        <h2 className="text-[32px] leading-10 tracking-[3.33px] uppercase md:text-[40px] md:tracking-[4.17px]">
           Hazy full moon of Appalachia
         </h2>
         <div className="flex items-center text-[13px] font-normal tracking-normal">

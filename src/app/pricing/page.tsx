@@ -1,6 +1,6 @@
-export default function Pricing() {
+export default function PricingPage() {
   return (
-    <main className="">
+    <main className="pt-25">
       <h1>Pricing</h1>
     </main>
   );
